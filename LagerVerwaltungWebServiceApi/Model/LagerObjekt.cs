@@ -13,18 +13,18 @@ namespace LagerVerwaltungWebServiceApi.Model
 
         public void saveLagerObjekt()
         {
-            id = DBHelper.getNewId("LagerArt");
-            DBHelper.ExecuteSQLCommand("INSERT INTO LAGERART(ID,BEZEICHNUNG)VALUES(" + id.ToString() + ",'" + bezeichnung + "')");
+            id = DBHelper.getNewId("LAGEROBJEKT");
+            DBHelper.ExecuteSQLCommand("INSERT INTO LAGEROBJEKT(ID,BEZEICHNUNG)VALUES(" + id.ToString() + ",'" + bezeichnung + "')");
         }
 
         public void deleteLagerObjekt()
         {
-            DBHelper.ExecuteSQLCommand("DELETE FROM LAGERART WHERE ID =" + id.ToString());
+            DBHelper.ExecuteSQLCommand("DELETE FROM LAGEROBJEKT WHERE ID =" + id.ToString());
         }
 
         public void updateLagerObjekt()
         {
-            DBHelper.ExecuteSQLCommand("UPDATE LAGERObjekt SET BEZEICHNUNG ='" + bezeichnung + "' WHERE ID =" + id.ToString());
+            DBHelper.ExecuteSQLCommand("UPDATE LAGEROBJEKT SET BEZEICHNUNG ='" + bezeichnung + "' WHERE ID =" + id.ToString());
         }
     }
 }
